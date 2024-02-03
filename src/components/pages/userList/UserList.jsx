@@ -1,7 +1,15 @@
 import "./userList.scss";
 import { DataGrid } from "@mui/x-data-grid";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { userRows } from "../../../dummyData";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function UserList() {
+  const [data, setData] = useState(userRows);
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
   const columns = [
     { field: "id", headerName: "ID", width: 45 },
     {
@@ -26,56 +34,37 @@ export default function UserList() {
     {
       field: "transaction",
       headerName: "Transaction",
-      width: 160,
-    },
-  ];
-
-  const rows = [
-    {
-      id: 1,
-      userName: "Anh Tran",
-      avatar: "assets/me.png",
-      email: "anhtt@gmail.com",
-      status: "active",
-      transaction: "$120.00",
+      width: 120,
     },
     {
-      id: 2,
-      userName: "Anh Tran",
-      avatar: "assets/me.png",
-      email: "anhtt@gmail.com",
-      status: "active",
-      transaction: "$120.00",
-    },
-    {
-      id: 3,
-      userName: "Anh Tran",
-      avatar: "assets/me.png",
-      email: "anhtt@gmail.com",
-      status: "active",
-      transaction: "$120.00",
-    },
-    {
-      id: 4,
-      userName: "Anh Tran",
-      avatar: "assets/me.png",
-      email: "anhtt@gmail.com",
-      status: "active",
-      transaction: "$120.00",
-    },
-    {
-      id: 5,
-      userName: "Anh Tran",
-      avatar: "assets/me.png",
-      email: "anhtt@gmail.com",
-      status: "active",
-      transaction: "$120.00",
+      field: "action",
+      headerName: "Action",
+      width: 150,
+      renderCell: (params) => {
+        return (
+          <>
+            <Link to={"/user/" + params.row.id}>
+              <button className="userListEdit">Edit</button>
+            </Link>
+            <DeleteOutlineIcon
+              className="userListDelete"
+              onClick={() => handleDelete(params.row.id)}
+            />
+          </>
+        );
+      },
     },
   ];
 
   return (
     <div className="userList">
-      <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+      <DataGrid
+        rows={data}
+        disableRowSelectionOnClick
+        columns={columns}
+        pageSize={8}
+        checkboxSelection
+      />
     </div>
   );
 }

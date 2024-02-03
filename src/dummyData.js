@@ -48,3 +48,46 @@ export const userData = [
     "Active User": 5000,
   },
 ];
+
+export const userRows = [
+  {
+    id: 1,
+    userName: "Anh Tran",
+    avatar: "assets/me.png",
+    email: "anhtt@gmail.com",
+    status: "active",
+    transaction: "$120.00",
+  },
+  {
+    id: 2,
+    userName: "Anh Tran",
+    avatar: "assets/me.png",
+    email: "anhtt@gmail.com",
+    status: "active",
+    transaction: "$120.00",
+  },
+  {
+    id: 3,
+    userName: "Anh Tran",
+    avatar: "assets/me.png",
+    email: "anhtt@gmail.com",
+    status: "active",
+    transaction: "$120.00",
+  },
+  {
+    id: 4,
+    userName: "Anh Tran",
+    avatar: "assets/me.png",
+    email: "anhtt@gmail.com",
+    status: "active",
+    transaction: "$120.00",
+  },
+  {
+    id: 5,
+    userName: "Anh Tran",
+    avatar: "assets/me.png",
+    email: "anhtt@gmail.com",
+    status: "active",
+    transaction: "$120.00",
+  },
+];
