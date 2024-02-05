@@ -1,6 +1,7 @@
 import "./sidebar.scss";
 import {
   LineStyle,
+  PermIdentity,
   Timeline,
   TrendingUp,
   Storefront,
@@ -42,14 +43,16 @@ export default function Sidebar() {
           <ul className="sidebarList">
             <Link to="/users" className="link">
               <li className="sidebarListItem ">
-                <LineStyle className="sidebarIcon" />
+                <PermIdentity className="sidebarIcon" />
                 Users
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              Products
-            </li>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions

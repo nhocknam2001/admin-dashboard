@@ -49,6 +49,25 @@ export const userData = [
   },
 ];
 
+export const productData = [
+  {
+    name: "Jan",
+    Sales: 3000,
+  },
+  {
+    name: "Feb",
+    Sales: 6000,
+  },
+  {
+    name: "Mar",
+    Sales: 2000,
+  },
+  {
+    name: "Apr",
+    Sales: 4000,
+  },
+];
+
 export const userRows = [
   {
     id: 1,
@@ -89,5 +108,48 @@ export const userRows = [
     email: "anhtt@gmail.com",
     status: "active",
     transaction: "$120.00",
+  },
+];
+
+export const productRows = [
+  {
+    id: 1,
+    name: "Apple",
+    img: "assets/me.png",
+    stock: "123",
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 2,
+    name: "Apple",
+    img: "assets/me.png",
+    stock: "123",
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 3,
+    name: "Apple",
+    img: "assets/me.png",
+    stock: "123",
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 4,
+    name: "Apple",
+    img: "assets/me.png",
+    stock: "123",
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 5,
+    name: "Apple",
+    img: "assets/me.png",
+    stock: "123",
+    status: "active",
+    price: "$120.00",
   },
 ];
